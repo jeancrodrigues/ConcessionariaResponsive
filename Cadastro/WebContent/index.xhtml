@@ -6,7 +6,35 @@
 
 <h:head></h:head> 
 <body> 
+	
 	<ui:composition template="/templates/commomTemplate.xhtml"> 
+		
+		<ui:define name="mainmenu">			
+			<h:form class="mobileUI-site-nav">
+				<ul>
+					<li class="current_page_item"><h:commandLink action="index" value="Home" /></li>
+					<li><h:commandLink action="app" value="App" /></li>
+					<li><h:commandLink action="about" value="About" /></li>
+				</ul>
+			</h:form>					
+		</ui:define>
+		
+		<ui:define name="content">
+			<h2>Welcome to Concessionária application</h2>
+			<p>The main goal of this app is to manage a car rent store.</p>		
+		</ui:define>
+		
+		<ui:define name="sidebarmenu">
+			<div id="sidebar" class="4u">
+				<section id="box2">
+					<h3>Menu</h3>
+					<ul class="style2">
+						
+					</ul>
+					<!-- <p><a href="#" class="button"><span>Read More</span></a></p> -->
+				</section>
+			</div>
+		</ui:define>	
 	
 	</ui:composition>
 

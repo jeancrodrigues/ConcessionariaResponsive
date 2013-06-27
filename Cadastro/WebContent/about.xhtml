@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"> 
+
+<h:head></h:head> 
+<body> 
+	<ui:composition template="/templates/commomTemplate.xhtml"> 
+		
+		<ui:define name="mainmenu">			
+			<h:form class="mobileUI-site-nav">
+				<ul>
+					<li><h:commandLink action="index" value="Home" /></li>
+					<li><h:commandLink action="app" value="App" /></li>
+					<li class="current_page_item"><h:commandLink action="about" value="About" /></li>
+				</ul>
+			</h:form>					
+		</ui:define>
+		
+		<ui:define name="content">
+			<h2>Concessionaria App</h2>
+			<p>App desenvolvida para o projeto integrador do 4 período do curso de Análise e Desenvolvimento de Sistemas UTFPR Campus Ponta Grossa</p>		
+		</ui:define>
+		
+		<ui:define name="sidebarmenu">
+		</ui:define>	
+	
+	</ui:composition>
+
+</body> 
+</html>

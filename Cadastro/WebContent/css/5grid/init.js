@@ -197,28 +197,27 @@
 		jQuery.fn.accelerate_5grid = function() { return jQuery(this).css('-webkit-transform', 'translateZ(0)').css('-webkit-backface-visibility', 'hidden').css('-webkit-perspective', '500'); }
 
 	// Determine base URL, settings
-//		x = jQuery('script').filter(function() { return this.src.match(/5grid\/init\.js/); }).first();
-//		y = x.attr('src').split('?');
-//		baseURL = y[0].replace(/5grid\/init\.js/, '');
-		baseURL = 'css/';
+		x = jQuery('script').filter(function() { return this.src.match(/5grid\/init\.js/); }).first();
+		y = x.attr('src').split('?');
+		baseURL = y[0].replace(/5grid\/init\.js/, '');
 
 		// Override settings
-//			if (y.length > 1)
-//			{
-//				x = y[1].split('&');
-//				for (v in x)
-//				{
-//					w = x[v].split('=');
-//					wk = w[0].replace(/\./, '_');
-//					wv = w[1];
-//					
-//					// Thanks, @cmsalvado! :)
-//					if (!isNaN(parseFloat(wv)) && isFinite(wv))
-//						wv = parseInt(wv);
-//					
-//					_settings[wk] = wv;
-//				}
-//			}
+			if (y.length > 1)
+			{
+				x = y[1].split('&');
+				for (v in x)
+				{
+					w = x[v].split('=');
+					wk = w[0].replace(/\./, '_');
+					wv = w[1];
+					
+					// Thanks, @cmsalvado! :)
+					if (!isNaN(parseFloat(wv)) && isFinite(wv))
+						wv = parseInt(wv);
+					
+					_settings[wk] = wv;
+				}
+			}
 	
 	// Debug settings
 		if (_settings.debug_noExtLoad == 1)
