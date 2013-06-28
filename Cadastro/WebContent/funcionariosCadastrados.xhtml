@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"> 
+
+<h:head>
+	<title>Funcionários Cadastrados</title>
+	
+</h:head> 
+<body>
+	<ui:composition template="/templates/commomTemplate.xhtml">
+<!-- 	<h:outputStylesheet library="css" name="css/table.css" /> -->
+	<ui:define name="sidebarmenu">
+		<div id="sidebar" class="4u">
+			
+			<section id="box2">
+				<h2>Menu</h2>				
+				<ul class="style1">
+					<h:form>
+						<li><h:commandLink value="Cadastrar Novo" action="cadastroFuncionario"/></li>
+					</h:form>
+				</ul>
+				<!-- <p><a href="#" class="button"><span>Read More</span></a></p> -->
+			</section>
+		</div>
+	</ui:define>
+	
+	<ui:define name="content">
+		<h1>Funcionários cadastrados</h1>
+		<h:form>
+			<h:dataTable 
+				value="#{manterFuncionariosBean.funcionarios}" 
+				var="func" 
+				styleClass="data-table"
+				headerClass="data-table-header"
+				rowClasses="data-table-row">
+				<h:column>
+					<f:facet name="header">Nome</f:facet>
+					<h:outputText value="#{func.nome}" />			
+				</h:column>
+				<h:column>
+					<f:facet name="header">Cpf</f:facet>
+					<h:outputText value="#{func.cpf}" />			
+				</h:column>
+				<h:column>
+					<h:commandLink value="Cadastro" action="#{manterFuncionariosBean.cadastroFuncionario(func)}" />
+				</h:column>
+				<h:column>
+					<h:commandLink value="Deletar" action="#{manterFuncionariosBean.excluirFuncionario(func)}" />
+				</h:column>			
+			</h:dataTable>
+		</h:form>
+	</ui:define>
+
+	</ui:composition>
+
+</body> 
+</html>

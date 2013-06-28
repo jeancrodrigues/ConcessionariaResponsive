@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"> 
+
+<h:head><title>Cadastro Funcionário</title></h:head> 
+<body> 
+	<ui:composition template="/templates/commomTemplate.xhtml">
+	
+	<ui:define name="sidebarmenu">
+		<div id="sidebar" class="4u">
+			<section id="box2">
+				<h3>Menu</h3>
+				<ul class="style1">
+					<h:form>
+						<li><h:commandLink value="Funcionários Cadastrados" action="funcionariosCadastrados" /></li>
+					</h:form>
+				</ul>
+				<!-- <p><a href="#" class="button"><span>Read More</span></a></p> -->
+			</section>
+		</div>
+	</ui:define>
+		
+	<ui:define name="content">
+		<h:form>
+			<h3>Cadastro de Funcionário</h3>
+			<br />
+			<table>				
+				<tr>
+					<td><h:outputText value="Nome" /></td>			
+					<td><h:inputText value="#{funcionarioBean.funcionario.nome}" /> </td>
+				</tr>
+				<tr>
+					<td><h:outputText value="Cpf" /></td>			
+					<td><h:inputText value="#{funcionarioBean.funcionario.cpf}" /></td>
+				</tr>
+				<tr></tr>
+				<tr>
+					<td></td>		
+					<td>
+						<h:commandButton action="index" value="Voltar" style="float:left;"/>
+						<h:commandButton action="#{funcionarioBean.salvarFuncionario}" value="Salvar" style="float:right;"/>
+					</td>
+				</tr>
+			</table> 
+			<h:outputText value="#{funcionarioBean.msg}" />	
+		</h:form>
+	</ui:define>
+	</ui:composition>
+</body> 
+</html>

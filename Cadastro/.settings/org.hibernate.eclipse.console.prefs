@@ -1,3 +1,3 @@
-default.configuration=Cadastro
+default.configuration=CadastroHibernate
 eclipse.preferences.version=1
 hibernate3.enabled=true

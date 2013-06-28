@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"> 
+
+<h:head></h:head> 
+<body> 
+	
+	<ui:composition template="/templates/commomTemplate.xhtml"> 
+		
+		<ui:define name="mainmenu">			
+			<h:form class="mobileUI-site-nav">
+				<ul>
+					<li class="current_page_item"><h:commandLink action="index" value="Home" /></li>
+					<li><h:commandLink action="app" value="App" /></li>
+					<li><h:commandLink action="about" value="About" /></li>
+				</ul>
+			</h:form>					
+		</ui:define>
+		
+		<ui:define name="content">
+			<h2>Welcome to Concessionária application</h2>
+			<p>The main goal of this app is to manage a car rent store.</p>
+			<p>Select an item on menu to start.</p>			
+		</ui:define>
+		
+		<ui:define name="sidebarmenu">
+			<div id="sidebar" class="4u">
+				<section id="box2">
+					<h3>Menu</h3>
+					<ul class="style2">
+						<h:form>
+							<li><h:commandLink value="Cadastro de Funcionario" action="cadastroFuncionario" /></li>
+							<li><h:commandLink value="Lista de Funcionarios" action="funcionariosCadastrados" /></li>
+						</h:form>
+					</ul>
+					<!-- <p><a href="#" class="button"><span>Read More</span></a></p> -->
+				</section>
+			</div>
+		</ui:define>	
+	
+	</ui:composition>
+
+</body> 
+</html>

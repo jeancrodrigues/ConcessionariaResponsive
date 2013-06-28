@@ -29,14 +29,21 @@
 			<div class="5grid-layout">
 				<div class="row">
 					<div class="5u" id="logo">
-						<h1><a href="#" class="mobileUI-site-name">Concessionária</a></h1>
+						<h1><a href="" class="mobileUI-site-name">Concessionária</a></h1>
 						<p>2013 @ droidnode.com</p>
 					</div>
 					<div class="7u" id="menu">
-<!-- 						<nav class="mobileUI-site-nav"> -->
-							<ui:insert name="mainmenu">
-							</ui:insert>							
-<!-- 						</nav> -->
+						<ui:insert name="mainmenu">								
+							<h:form>
+								<nav class="mobileUI-site-nav">
+									<ul>
+										<li><h:commandLink action="index" value="Home" /></li>
+										<li class="current_page_item"><h:commandLink action="app" value="App" /></li>
+										<li><h:commandLink action="about" value="About" /></li>
+									</ul>
+								</nav>
+							</h:form>
+						</ui:insert>							
 					</div>
 				</div>
 			</div>
@@ -45,8 +52,7 @@
 	
 	<div id="wrapper" class="5grid-layout">
 		<!-- Page Content -->
-		<div id="page" class="row">
-			
+		<div id="page" class="row">			
 			
 			<ui:insert name="sidebarmenu">
 				<!-- Sidebar Area -->
