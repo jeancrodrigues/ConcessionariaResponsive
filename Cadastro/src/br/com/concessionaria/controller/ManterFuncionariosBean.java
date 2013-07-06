@@ -46,8 +46,7 @@ public class ManterFuncionariosBean implements Serializable{
 		}		
 	}
 	
-	public String cadastroFuncionario(Funcionario func){
-		this.setFuncionario(func);
+	public String cadastroFuncionario(){
 		return "cadastroFuncionario";
 	}
 }

@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+      
+<h:head>
+	<title>Concessionária</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<noscript>
+		<h:outputStylesheet library="css" name="5grid/core.css"  />		
+		<h:outputStylesheet library="css" name="5grid/core-desktop.css" />
+		<h:outputStylesheet library="css" name="5grid/core-1200px.css" />
+		<h:outputStylesheet library="css" name="5grid/core-noscript.css" />
+<!-- 		<h:outputStylesheet library="css" name="style.css" /> -->
+		
+		<h:outputStylesheet library="css" name="style-desktop.css" />
+		<link rel="stylesheet" href="resources/css/style.css" />
+	</noscript>
+	<h:outputStylesheet library="css" name="table.css"/>
+	
+	<h:outputScript library="css" name="5grid/jquery.js" />
+<!-- 	<script src="css/5grid/jquery.js"></script> -->
+<!-- 	<h:outputScript library="css" name="5grid/init.js?use=mobile,desktop,1000px&amp;mobileUI=1&amp;mobileUI.theme=none" /> -->
+
+<!-- 	<script src="resources/css/5grid/init.js?use=mobile,desktop,1000px&amp;mobileUI=1&amp;mobileUI.theme=none"/> -->
+	<script type="text/javascript" src="resources/css/5grid/init.js?use=mobile,desktop,1000px&amp;mobileUI=1&amp;mobileUI.theme=none"></script>
+	<!--[if IE 9]><link rel="stylesheet" href="css/style-ie9.css" /><![endif]-->		
+</h:head>
+
+<body class="left-sidebar">
+	<!-- Header -->
+	<div id="header-wrapper">		
+		<header id="header">
+			<div class="5grid-layout">
+				<div class="row">
+					<div class="5u" id="logo">
+						<h1><a href="" class="mobileUI-site-name">Concessionária</a></h1>
+						<p>2013 @ droidnode.com</p>
+					</div>
+					<div class="7u" id="menu">
+						<ui:insert name="mainmenu">								
+							<h:form>
+								<nav class="mobileUI-site-nav">
+									<ul>
+										<li><h:commandLink action="index" value="Home" /></li>
+										<li class="current_page_item"><h:commandLink action="app" value="App" /></li>
+										<li><h:commandLink action="about" value="About" /></li>
+									</ul>
+								</nav>
+							</h:form>
+						</ui:insert>							
+					</div>
+				</div>
+			</div>
+		</header>			
+	</div>
+	
+	<div id="wrapper" class="5grid-layout">
+		<!-- Page Content -->
+		<div id="page" class="row">			
+			
+			<ui:insert name="sidebarmenu">
+				<!-- Sidebar Area -->
+				<div id="sidebar" class="4u">
+					<section id="box2">
+						<h3>Menu</h3>
+						<ul class="style2">
+							
+						</ul>
+						<!-- <p><a href="#" class="button"><span>Read More</span></a></p> -->
+					</section>
+				</div>
+			</ui:insert>
+			
+			<!-- Content Area -->
+			<div id="content" class="8u mobileUI-main-content">
+				<!-- Main Content Area -->
+				<section>
+					<ui:insert name="content"></ui:insert>
+				</section>					
+			</div>
+		</div>
+		<!-- Page Content -->
+	</div>
+	<!-- Wrapper Ends Here -->	
+	<!-- Copyright -->
+	<div class="5grid-layout" id="copyright">
+		<div class="row">
+			<div class="12u">
+				<p> 2013 @ Concessionária </p>
+			</div>
+		</div>
+	</div>		
+</body>
+</html>
+
+
+<!--
+	HeavyIndustry: A responsive HTML5 website template by HTML5Templates.com
+	Released for free under the Creative Commons Attribution 3.0 license (html5templates.com/license)
+	Visit http://html5templates.com for more great templates or follow us on Twitter @HTML5T
+-->

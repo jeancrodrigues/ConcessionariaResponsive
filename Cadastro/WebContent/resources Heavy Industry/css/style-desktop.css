@@ -126,22 +126,22 @@
 
 	#sidebar #box2
 	{
-		padding: 1em 2em 0em 0em;
+		padding: 3em 2em 0em 0em;
 	}
 
 	.left-sidebar #sidebar #box2
 	{
-		padding: 1em 0em 0em 2em;
+		padding: 3em 0em 0em 2em;
 	}
 
 	#sidebar #box3
 	{
-		padding: 1em 2em 0em 0em;
+		padding: 3em 2em 0em 0em;
 	}
 
 	.left-sidebar #sidebar #box3
 	{
-		padding: 1em 0em 0em 2em;
+		padding: 3em 0em 0em 2em;
 	}
 
 /* Three Column */

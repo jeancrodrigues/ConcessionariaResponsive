@@ -2,33 +2,27 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:ui="http://java.sun.com/jsf/facelets">
+      xmlns:ui="http://java.sun.com/jsf/facelets"> 
 
-<ui:composition template="/resources/templates/commomTemplate.xhtml">
-
+<ui:composition template="/resources/commomTemplate.xhtml">
 	<ui:define name="sidebarmenu">
-		<div id="sidebar" class="4u">
-			<section id="box2">
-				<h2>Menu</h2>				
-				<ul class="style1">
-					<h:form>
-						<li><h:commandLink value="Cadastrar Novo" action="cadastroFuncionario"/></li>
-					</h:form>
-				</ul>
-				<!-- <p><a href="#" class="button"><span>Read More</span></a></p> -->
-			</section>
-		</div>
+		<h2>Menu</h2>				
+		<ul>
+			<h:form>
+				<li><h:commandLink value="Cadastrar Novo" action="cadastroFuncionario"/></li>
+			</h:form>
+		</ul>
 	</ui:define>
 	
 	<ui:define name="content">
-		<h1>Funcionários cadastrados</h1>
+		<h3>Funcionários cadastrados</h3>
 		<h:form>
 			<h:dataTable 
 				value="#{manterFuncionariosBean.funcionarios}" 
 				var="func" 
 				styleClass="data-table"
 				headerClass="data-table-header"
-				rowClasses="data-table-row">
+				rowClasses="data-table-row" cellpadding="2em"  >
 				<h:column>
 					<f:facet name="header">Nome</f:facet>
 					<h:outputText value="#{func.nome}" />			
@@ -38,7 +32,10 @@
 					<h:outputText value="#{func.cpf}" />			
 				</h:column>
 				<h:column>
-					<h:commandLink value="Cadastro" action="#{manterFuncionariosBean.cadastroFuncionario(func)}" />
+					<h:commandLink value="Cadastro" action="cadastroFuncionario">
+<!-- 						<f:setPropertyActionListener target="#{funcionarioBean.funcionario}" value="#{func}" /> -->
+						<f:param name="func_id" value="#{func.idfuncionario}" />
+					</h:commandLink>					
 				</h:column>
 				<h:column>
 					<h:commandLink value="Deletar" action="#{manterFuncionariosBean.excluirFuncionario(func)}" />

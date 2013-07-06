@@ -7,36 +7,34 @@
 <h:head></h:head> 
 <body> 
 	
-	<ui:composition template="/resources/templates/commomTemplate.xhtml"> 
-		
-		<ui:define name="mainmenu">			
-			<h:form class="mobileUI-site-nav">
-				<ul>
-					<li class="current_page_item"><h:commandLink action="index" value="Home" /></li>
-					<li><h:commandLink action="#" value="App" /></li>
-					<li><h:commandLink action="about" value="About" /></li>
-				</ul>
-			</h:form>					
-		</ui:define>
-		
+	<ui:composition template="/resources/commomTemplate.xhtml"> 
+<!-- 		<ui:define name="mainmenu"> -->
+<!-- 			<h:form> -->
+<!-- 			<div class="dropdown"> -->
+<!-- 				<ul> -->
+<!-- 					<li><h:commandLink action="index" value="Home" /></li> -->
+<!-- 					<li><h:commandLink action="#" value="App" /></li> -->
+<!-- 					<li><h:commandLink action="about" value="About" /></li> -->
+<!-- 				</ul> -->
+<!-- 			</div> -->
+<!-- 			</h:form>		 -->
+<!-- 		</ui:define> -->
+
 		<ui:define name="content">
-			<h2>Welcome to Concessionária application</h2>
+			<h2>Welcome to RentStore application</h2>
+			<br />
 			<p>The main goal of this app is to manage a car rent store.</p>
 			<p>Select an item on menu to start.</p>			
 		</ui:define>
 		
 		<ui:define name="sidebarmenu">
-			<div id="sidebar" class="4u">
-				<section id="box2">		
-					<h2>Menu</h2>			
-					<ul class="style1">
-						<h:form>
-							<li><h:commandLink value="Funcionarios" action="funcionariosCadastrados"/></li>
-						</h:form>
-					</ul>
-					<!-- <p><a href="#" class="button"><span>Read More</span></a></p> -->
-				</section>
-			</div>
+			<h2>Menu</h2>			
+			<ul>
+				<h:form>
+					<li><h:commandLink value="Funcionários" action="funcionariosCadastrados"/></li>
+					<li><h:commandLink value="Cadastro Cliente" action="cadastroCliente"/></li>
+				</h:form>
+			</ul>
 		</ui:define>	
 	
 	</ui:composition>

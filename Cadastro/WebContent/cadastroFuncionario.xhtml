@@ -6,45 +6,50 @@
 
 <h:head><title>Cadastro Funcionário</title></h:head> 
 <body> 
-	<ui:composition template="/resources/templates/commomTemplate.xhtml">
+	<ui:composition template="/resources/commomTemplate.xhtml">
 	
 	<ui:define name="sidebarmenu">
-		<div id="sidebar" class="4u">
-			<section id="box2">
-				<h3>Menu</h3>
-				<ul class="style1">
-					<h:form>
-						<li><h:commandLink value="Funcionários Cadastrados" action="funcionariosCadastrados" /></li>
-					</h:form>
-				</ul>
-				<!-- <p><a href="#" class="button"><span>Read More</span></a></p> -->
-			</section>
-		</div>
+		<h:form>
+			<nav id="sidebar-nav-holder" 
+				 class="vertical-nav" gumby-fixed="top|[data-target='gumby-helpers']" 
+				 style="width: auto; top: 0px;">
+				<h3>Menu</h3>	 
+		        <ul id="sidebar-nav">
+		        	<li><h:commandLink class="skip" value="Funcionários Cadastrados" action="funcionariosCadastrados" /></li>                
+		        </ul>
+		    </nav>
+          </h:form>
 	</ui:define>
 		
 	<ui:define name="content">
 		<h:form>
 			<h3>Cadastro de Funcionário</h3>
 			<br />
-			<table>				
-				<tr>
-					<td><h:outputText value="Nome" /></td>			
-					<td><h:inputText value="#{funcionarioBean.funcionario.nome}" /> </td>
-				</tr>
-				<tr>
-					<td><h:outputText value="Cpf" /></td>			
-					<td><h:inputText value="#{funcionarioBean.funcionario.cpf}" /></td>
-				</tr>
-				<tr></tr>
-				<tr>
-					<td></td>		
-					<td>
-						<h:commandButton action="index" value="Voltar" style="float:left;"/>
-						<h:commandButton action="#{funcionarioBean.salvarFuncionario}" value="Salvar" style="float:right;"/>
-					</td>
-				</tr>
-			</table> 
-			<h:outputText value="#{funcionarioBean.msg}" />	
+			
+			<div id="container" class="six columns">
+				<div class="row">
+					<ul>
+					<h:outputText value="Nome" class="two columns"/>
+					<li class="field">
+						<h:inputText value="#{funcionarioBean.funcionario.nome}"
+							class="text input"/>
+					</li>				
+					<h:outputText value="Cpf" class="two columns"/>
+					<li class="field">	
+						<h:inputText value="#{funcionarioBean.funcionario.cpf}" 
+							class="text input"/>
+					</li>
+					</ul>
+				</div>
+				<br />
+				<div class="row">
+					<div class="medium info btn"><h:commandLink action="funcionariosCadastrados" value="Voltar"/></div>
+					<div  class="medium info btn"><h:commandLink action="#{funcionarioBean.salvarFuncionario}" value="Salvar"/></div>				
+				</div>
+				<div class="row">					
+					<h:outputText value="#{funcionarioBean.msg}" />					
+				</div>			
+			</div>				
 		</h:form>
 	</ui:define>
 	</ui:composition>
