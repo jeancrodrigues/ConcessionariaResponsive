@@ -1,6 +1,6 @@
-package br.com.concessionaria.dao;
+package com.jree.rentstore.dao;
 
-import br.com.concessionaria.model.Funcionario;
+import com.jree.rentstore.model.Funcionario;
 
 public interface IFuncionarioDao extends IConcessionariaBaseDAO<Funcionario> {	
 	public Funcionario buscarPorCPF(String cpf);		

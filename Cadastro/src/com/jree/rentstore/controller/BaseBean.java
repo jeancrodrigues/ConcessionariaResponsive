@@ -1,4 +1,4 @@
-package br.com.concessionaria.controller;
+package com.jree.rentstore.controller;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;

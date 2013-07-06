@@ -1,4 +1,4 @@
-package br.com.concessionaria.dao;
+package com.jree.rentstore.dao;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package br.com.concessionaria.controller;
+package com.jree.rentstore.controller;
 
 import java.io.Serializable;
 import java.util.List;
@@ -7,8 +7,8 @@ import javax.ejb.EJB;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 
-import br.com.concessionaria.dao.IFuncionarioDao;
-import br.com.concessionaria.model.Funcionario;
+import com.jree.rentstore.dao.IFuncionarioDao;
+import com.jree.rentstore.model.Funcionario;
 
 @ViewScoped
 @ManagedBean

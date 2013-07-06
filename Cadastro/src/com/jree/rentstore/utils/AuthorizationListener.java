@@ -1,4 +1,4 @@
-package br.com.concessionaria.util;
+package com.jree.rentstore.utils;
 
 import javax.faces.application.NavigationHandler;
 import javax.faces.context.FacesContext;
